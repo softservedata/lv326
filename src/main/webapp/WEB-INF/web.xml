@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/javaee" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" id="WebApp_ID" version="3.0">
+  <display-name>lv326web</display-name>
+  <servlet>
+    <servlet-name>info1</servlet-name>
+    <jsp-file>/WEB-INF/views/info1.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>info1</servlet-name>
+    <url-pattern>/info1.jsp</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>error</servlet-name>
+    <jsp-file>/WEB-INF/views/commons/Error.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>error</servlet-name>
+    <url-pattern>/error</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>dashboard</servlet-name>
+    <jsp-file>/WEB-INF/views/commons/UserItems.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>dashboard</servlet-name>
+    <url-pattern>/dashboard</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>user</servlet-name>
+    <jsp-file>/WEB-INF/views/users/UserProfile.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>user</servlet-name>
+    <url-pattern>/user</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <servlet-name>item</servlet-name>
+    <jsp-file>/WEB-INF/views/items/ItemProfile.jsp</jsp-file>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>item</servlet-name>
+    <url-pattern>/item</url-pattern>
+  </servlet-mapping>
+</web-app>

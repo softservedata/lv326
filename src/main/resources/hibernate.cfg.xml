@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+          "-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+          "http://hibernate.sourceforge.net/hibernate-configuration-3.0.dtd">
+
+<hibernate-configuration>
+	<session-factory>
+		<property name="eclipse.connection.profile">hibernate1</property>
+<!-- 		<property name="connection.url">jdbc:microsoft:sqlserver://localhost:1433;DatabaseName=firsthibernate</property> -->
+<!-- 		<property name="connection.url">jdbc:sqlserver://class02\SQLEXPRESS;databaseName=lv215work</property> -->
+<!-- 		<property name="connection.url">jdbc:jtds:sqlserver://CLASS02/lv215work;instance=SQLEXPRESS;</property> -->
+
+<!-- <property name="connection.url">jdbc:jtds:sqlserver://CLASS02/lv257work;instance=SQLEXPRESS;</property> -->
+<!-- 		<property name="connection.url">jdbc:sqlserver://CLASS02.training.local\\SQLEXPRESS;databasename=Lv257Test;</property> -->
+		<property name="connection.url">jdbc:mysql://localhost:3306/lv326</property>
+<!-- 		<property name="connection.username">db257</property> -->
+<!-- 		<property name="connection.password">db257</property> -->
+		<property name="connection.username">root</property>
+		<property name="connection.password">root</property>
+
+<!-- 		<property name="hibernate.hbm2ddl.auto">create</property> -->
+		<property name="hibernate.hbm2ddl.auto">update</property>
+
+		<property name="connection.driver_class">
+				com.mysql.jdbc.Driver
+<!-- 			net.sourceforge.jtds.jdbc.Driver -->
+<!-- 			com.microsoft.sqlserver.jdbc.SQLServerDriver -->
+		</property>
+		<property name="dialect">
+			org.hibernate.dialect.MySQL5Dialect
+<!-- 			org.hibernate.dialect.MySQLDialect -->
+<!-- 			org.hibernate.dialect.SQLServerDialect -->
+		</property>
+		<!-- Echo all executed SQL to stdout -->
+<!--     	<property name="show_sql">true</property> -->
+    	
+		<mapping resource="Honey.hbm.xml" />
+	</session-factory>
+</hibernate-configuration>

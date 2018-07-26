@@ -12,9 +12,13 @@
 
 <!-- <property name="connection.url">jdbc:jtds:sqlserver://CLASS02/lv257work;instance=SQLEXPRESS;</property> -->
 <!-- 		<property name="connection.url">jdbc:sqlserver://CLASS02.training.local\\SQLEXPRESS;databasename=Lv257Test;</property> -->
+<!-- 		<property name="connection.url">jdbc:sqlserver://ssu-sql12\\tc;databasename=Lv326hibernate;</property> -->
+
+<!-- 		<property name="connection.url">jdbc:jtds:sqlserver://ssu-sql12/Lv326hibernate;instance=tc;</property> -->
 		<property name="connection.url">jdbc:mysql://localhost:3306/lv326</property>
-<!-- 		<property name="connection.username">db257</property> -->
-<!-- 		<property name="connection.password">db257</property> -->
+
+<!-- 		<property name="connection.username">db326</property> -->
+<!-- 		<property name="connection.password">db326</property> -->
 		<property name="connection.username">root</property>
 		<property name="connection.password">root</property>
 
@@ -27,13 +31,26 @@
 <!-- 			com.microsoft.sqlserver.jdbc.SQLServerDriver -->
 		</property>
 		<property name="dialect">
+<!-- 				org.hibernate.dialect.MySQL5InnoDBDialect -->
 			org.hibernate.dialect.MySQL5Dialect
 <!-- 			org.hibernate.dialect.MySQLDialect -->
 <!-- 			org.hibernate.dialect.SQLServerDialect -->
 		</property>
 		<!-- Echo all executed SQL to stdout -->
 <!--     	<property name="show_sql">true</property> -->
-    	
-		<mapping resource="Honey.hbm.xml" />
+
+<!-- 	<mapping resource="Honey.hbm.xml" /> -->
+
+<!-- 	<mapping resource="entity/Book.hbm.xml" /> -->
+<!-- 	<mapping resource="entity/Reader.hbm.xml" /> -->
+<!-- 	<mapping resource="entity/Using.hbm.xml" /> -->
+
+<!-- 		<mapping class="com.softserve.edu.Book" /> -->
+<!-- 		<mapping class="com.softserve.edu.Reader" /> -->
+<!-- 		<mapping class="com.softserve.edu.ReaderBooks" /> -->
+	
+		<mapping class="com.softserve.train.Book" />
+		<mapping class="com.softserve.train.Reader" />
+	
 	</session-factory>
 </hibernate-configuration>

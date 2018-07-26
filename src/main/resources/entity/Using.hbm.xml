@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+<hibernate-mapping>
+    <class name="com.softserve.edu.entity.Using" table="USINGS">
+        <id name="id" type="java.lang.Long">
+            <column name="ID" />
+            <generator class="native" />
+        </id>
+        <many-to-one name="book" class="com.softserve.edu.entity.Book">
+            <column name="IDBOOK" />
+        </many-to-one>
+        <many-to-one name="reader" class="com.softserve.edu.entity.Reader">
+            <column name="IDREADER" />
+        </many-to-one>
+        <property name="dateReturn" type="java.sql.Date">
+            <column name="DATERETURN" />
+        </property>
+    </class>
+</hibernate-mapping>

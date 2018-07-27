@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.softserve.edu</groupId>
-	<artifactId>hibernate1</artifactId>
+	<artifactId>hibernate3</artifactId>
 	<version>1.0</version>
 
 	<packaging>jar</packaging>

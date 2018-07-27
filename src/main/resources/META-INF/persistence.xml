@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.0"
+	xmlns="http://java.sun.com/xml/ns/persistence"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd">
+
+<!-- <persistence version="1.0" -->
+<!-- 	xmlns="http://java.sun.com/xml/ns/persistence" -->
+<!-- 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" -->
+<!-- 	xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_1_0.xsd"> -->
+	
+	<persistence-unit name="JavaLv326" transaction-type="RESOURCE_LOCAL">
+	    <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+<!-- 		<provider>org.hibernate.ejb.HibernatePersistence</provider> -->
+
+		<class>com.softserve.entity.Artist</class>
+		<properties>
+			<!-- MsSQL -->
+			<!-- <property name="hibernate.dialect" value="org.hibernate.dialect.SQLServerDialect" 
+				/> -->
+			<!-- <property name="hibernate.connection.show_sql" value="true" /> -->
+			<!-- <property name="hibernate.hbm2ddl.auto" value="never" /> -->
+			<!-- <property name="hibernate.connection.driver_class" value="net.sourceforge.jtds.jdbc.Driver" 
+				/> -->
+			<!-- <property name="hibernate.jdbc.use_scrollable_resultset" -->
+			<!-- value="false" /> -->
+			<!-- <property name="hibernate.connection.username" value="105-java" /> -->
+			<!-- <property name="hibernate.connection.password" value="105-java" /> -->
+			<!-- <property name="hibernate.connection.url" -->
+			<!-- value="jdbc:jtds:sqlserver://127.0.0.1;instance=SQLEXPRESS;DatabaseName=test" 
+				/> -->
+			<!-- MySQL -->
+<!-- 			<property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver" /> -->
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver" />
+<!-- 			<property name="hibernate.connection.url" value="jdbc:mysql://localhost:3306/lv326" /> -->
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/lv326" />
+<!-- 			<property name="hibernate.connection.username" value="root" /> -->
+			<property name="javax.persistence.jdbc.user" value="root"/>
+<!-- 			<property name="hibernate.connection.password" value="root" /> -->
+			<property name="javax.persistence.jdbc.password" value="root"/>
+			
+			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5Dialect" />
+			<!-- <property name="hibernate.connection.show_sql" value="true" /> -->
+			<!-- <property name="hibernate.hbm2ddl.auto" value="never" /> -->
+			<property name="hibernate.hbm2ddl.auto" value="update" />
+			<property name="hibernate.jdbc.use_scrollable_resultset" value="false" />
+			<property name="current_session_context_class" value="thread" />
+			
+<!-- 			<property name="eclipselink.ddl-generation" value="create-tables"/> -->
+<!--       		<property name="eclipselink.ddl-generation.output-mode" value="database"/> -->
+		</properties>
+	</persistence-unit>
+</persistence>

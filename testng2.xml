@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM
+     "http://beust.com/testng/testng-1.0.dtd" >
+<suite name="My test suite">
+	<test name="testing">
+		<groups>
+			<run>
+				<include name="method2" />
+				<include name="method4" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.softserve.edu.TestNGTest5" />
+		</classes>
+	</test>
+</suite>

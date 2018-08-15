@@ -28,12 +28,12 @@ public final class DataSourceRepository {
               createDBTables();
         }
         return new DataSource(sqlDriver,
-                "jdbc:mysql://localhost:3306/myteams?useSSL=false&allowPublicKeyRetrieval=true", "root", "root");
+                "jdbc:mysql://localhost:3306/myteams?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC", "root", "root");
     }
     public static boolean checkDBExists(String dbName){
 
         try{
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/?useSSL=false&allowPublicKeyRetrieval=true","root","root");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC","root","root");
             ResultSet resultSet = conn.getMetaData().getCatalogs();
             //iterate each catalog in the ResultSet
             while (resultSet.next()) {
@@ -54,7 +54,7 @@ public final class DataSourceRepository {
     }
     public static void createDBTables(){
         try {
-            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/?useSSL=false&allowPublicKeyRetrieval=true","root","root");
+            Connection conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/?useSSL=false&allowPublicKeyRetrieval=true&serverTimezone=UTC","root","root");
            Statement st=conn.createStatement();
             st.executeUpdate(DBConst.CREATE_DB);
             st.executeUpdate(DBConst.CREATE_TABLE_USERS);

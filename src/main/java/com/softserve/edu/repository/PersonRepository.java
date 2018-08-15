@@ -12,7 +12,7 @@ import com.softserve.edu.entity.Person;
 // Use JPARepository
 @Repository
 //public interface PersonRepository {//extends CrudRepository<Person, Integer> {
-public interface PersonRepository {//extends JpaRepository<Person, Integer> {
+public interface PersonRepository extends JpaRepository<Person, Integer> {
 	
 	//@Query("select p from Person p where p.name = :name")
 	//@Query("select p from Person p")

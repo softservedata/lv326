@@ -10,6 +10,7 @@
 					<include name="testApp" />
 				</methods>
 			</class>
+			<class name="com.softserve.edu.PersonServiceTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

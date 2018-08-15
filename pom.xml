@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.softserve.edu</groupId>
-	<artifactId>cinema</artifactId>
+	<artifactId>lv326</artifactId>
 	<version>1.0</version>
 
 	<packaging>jar</packaging>
@@ -62,7 +62,7 @@
 		<maven.surefire.plugin.version>2.21.0</maven.surefire.plugin.version>
 		<!-- - - - - - Mock - - - - - -->
 		<org.mockito.version>1.10.19</org.mockito.version>
-		<org.powermock.version>1.7.3</org.powermock.version>
+		<org.powermock.version>1.7.4</org.powermock.version>
 		<!-- - - - - - Logging - - - - - -->
 		<org.slf4j.version>1.7.25</org.slf4j.version>
 	</properties>
@@ -222,8 +222,43 @@
 			<artifactId>testng</artifactId>
 			<version>${org.testng.version}</version>
 			<scope>test</scope>
-		</dependency>
+			</dependency>
+
+<!-- 		<dependency> -->
+<!-- 			<groupId>junit</groupId> -->
+<!-- 			<artifactId>junit</artifactId> -->
+<!-- 			<version>4.12</version> -->
+<!-- 			<scope>test</scope> -->
+<!-- 		</dependency> -->
+		<!-- - - - - - Mock - - - - - -->
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-all</artifactId>
+				<version>${org.mockito.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-api-mockito</artifactId>
+				<version>${org.powermock.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-testng</artifactId>
+				<version>${org.powermock.version}</version>
+				<scope>test</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.powermock</groupId>
+				<artifactId>powermock-module-junit4</artifactId>
+				<version>1.6.5</version>
+			</dependency>
 		
+			<dependency>
+				<groupId>org.mockito</groupId>
+				<artifactId>mockito-core</artifactId>
+				<version>2.8.9</version>
+			</dependency>
 		<!-- - - - - - Logging - - - - - -->
 <!-- 		<dependency> -->
 <!-- 			<groupId>org.slf4j</groupId> -->

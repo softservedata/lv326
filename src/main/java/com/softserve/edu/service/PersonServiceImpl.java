@@ -13,10 +13,10 @@ import com.softserve.edu.repository.PersonRepository;
 @Transactional
 public class PersonServiceImpl implements PersonService {
 	
-	//@Autowired
+	@Autowired
 	private PersonRepository personRepository;
 
-	@Autowired
+	//@Autowired
 	public PersonServiceImpl(PersonRepository personRepository) {
 		this.personRepository = personRepository;
 	}

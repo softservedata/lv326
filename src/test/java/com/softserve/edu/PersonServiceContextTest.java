@@ -3,13 +3,19 @@ package com.softserve.edu;
 import java.util.ArrayList;
 import java.util.List;
 
+import org.mockito.InjectMocks;
+import org.mockito.Mock;
+import org.mockito.MockitoAnnotations;
 import org.powermock.api.mockito.PowerMockito;
 import org.powermock.core.classloader.annotations.PrepareForTest;
-import org.powermock.modules.testng.PowerMockObjectFactory;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener;
+import org.springframework.test.context.TestExecutionListeners;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.Assert;
-import org.testng.IObjectFactory;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.DataProvider;
-import org.testng.annotations.ObjectFactory;
 import org.testng.annotations.Test;
 
 import com.softserve.edu.entity.Person;
@@ -20,21 +26,34 @@ import com.softserve.edu.service.PersonServiceImpl;
 //@SpringBootTest(classes = Application.class)
 //@RunWith(SpringJUnit4ClassRunner.class)
 //@RunWith(PowerMockRunner.class)
+@TestExecutionListeners(MockitoTestExecutionListener.class)
+//@DataJpaTest
+@SpringBootTest
 @PrepareForTest({ PersonRepository.class })
-public class PersonServiceTest {
+public class PersonServiceContextTest
+		extends AbstractTestNGSpringContextTests {
 
-	//@Autowired
-	//private PersonServiceImpl personServiceImpl;
+	@Mock
+	private PersonRepository personRepositoryMock;
 	
-	@ObjectFactory
-	public IObjectFactory setObjectFactory() {
-		return new PowerMockObjectFactory();
+	//@Autowired
+	@InjectMocks
+	private PersonServiceImpl personServiceImpl;
+	
+	@BeforeMethod
+	public void initMocks(){
+		MockitoAnnotations.initMocks(this);
 	}
+	
+	//@ObjectFactory
+	//public IObjectFactory setObjectFactory() {
+	//	return new PowerMockObjectFactory();
+	//}
 	
 	@DataProvider // (parallel = true)
 	public Object[][] dbUsers() {
 		return new Object[][] {
-			{ "Petro" },
+			//{ "Petro" },
 			{ "Stepan" }
 		};
 	}
@@ -43,7 +62,7 @@ public class PersonServiceTest {
 	public void verifyFindByName(String name) {
 	//public void verifyFindByName() {
 		//String name = "Stepan";
-		PersonRepository personRepositoryMock = PowerMockito.mock(PersonRepository.class);
+		//PersonRepository personRepositoryMock = PowerMockito.mock(PersonRepository.class);
 		//
 		List<Person> persons = new ArrayList<>();
 		Person person = new Person();
@@ -54,7 +73,7 @@ public class PersonServiceTest {
 		//
 		PowerMockito.when(personRepositoryMock.findByName(name))
 				 .thenReturn(persons);
-		PersonServiceImpl personServiceImpl = new PersonServiceImpl(personRepositoryMock);
+		//PersonServiceImpl personServiceImpl = new PersonServiceImpl(personRepositoryMock);
 		//
 		List<Person> actual = personServiceImpl.findByName(name);
 		System.out.println("actual= " + actual.get(0).getName());

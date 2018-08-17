@@ -11,6 +11,7 @@
 				</methods>
 			</class>
 			<class name="com.softserve.edu.PersonServiceTest" />
+			<class name="com.softserve.edu.PersonServiceContextTest" />
 		</classes>
 	</test> <!-- Test -->
 </suite> <!-- Suite -->

@@ -1,9 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Registrator_Suite">
+
+<suite name="First_Suite">
 	<parameter name="testurl" value="http://ssu-oms:8180/" />
+
 	<!-- 3 ERROR 5 WARNING 7 INFO -->
-	<test verbose="5" name="Registrator_Test">
+	<test verbose="5" name="First_Test">
 		<classes>
 			<class name="com.softserve.edu.AppTest">
 				<methods>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Second_Suite">
+	<parameter name="testurl" value="http://ssu-oms:8180/" />
+
+	<!-- 3 ERROR 5 WARNING 7 INFO -->
+	<test verbose="5" name="Second_Test">
+		<classes>
+			<class name="com.softserve.edu.PersonServiceContextTest" />
+		</classes>
+	</test> <!-- Test -->
+
+</suite> <!-- Suite -->

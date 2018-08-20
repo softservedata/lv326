@@ -22,6 +22,7 @@ public class PersonServiceImpl implements PersonService {
 	}
 	
 	public List<Person> findByName(String name) {
+	    System.out.println("+++findByName done");
 		return personRepository.findByName(name);
 	}
 	

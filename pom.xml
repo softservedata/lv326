@@ -1,14 +1,15 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.softserve.edu</groupId>
-	<artifactId>singlespring</artifactId>
+	<artifactId>singleexample</artifactId>
 	<version>1.0</version>
 
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
-	<name>singlespring</name>
+	<name>${project.artifactId}</name>
 	<url>http://maven.apache.org</url>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<properties>
@@ -38,6 +39,9 @@
 		<maven.compiler.plugin.version>3.3</maven.compiler.plugin.version>
 		<maven.surefire.plugin.version>2.19</maven.surefire.plugin.version>
 		<maven.war.plugin.version>2.6</maven.war.plugin.version>
+		<!-- - - - - - Utils - - - - - -->
+		<org.apache.poi.version>3.16</org.apache.poi.version>
+		<!-- <xerces.xercesImpl.version>2.11.0</xerces.xercesImpl.version> -->
 	</properties>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<dependencies>
@@ -78,13 +82,8 @@
 			<version>${mysql.connector.version}</version>
 		</dependency>
 		<!-- - - - JPA - - - -->
-		<!--
-		<dependency>
-			<groupId>javax.persistence</groupId>
-			<artifactId>persistence-api</artifactId>
-			<version>1.0.2</version>
-		</dependency>
-		-->
+		<!-- <dependency> <groupId>javax.persistence</groupId> <artifactId>persistence-api</artifactId> 
+			<version>1.0.2</version> </dependency> -->
 		<dependency>
 			<groupId>org.hibernate.javax.persistence</groupId>
 			<artifactId>hibernate-jpa-2.1-api</artifactId>
@@ -155,6 +154,17 @@
 			<artifactId>javassist</artifactId>
 			<version>${bytecode.javassist.version}</version>
 		</dependency>
+		<!-- - - - Read from Excel formats, etc. - - - -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${org.apache.poi.version}</version>
+		</dependency>
+		<!-- <dependency> -->
+		<!-- <groupId>xerces</groupId> -->
+		<!-- <artifactId>xercesImpl</artifactId> -->
+		<!-- <version>${xerces.xercesImpl.version}</version> -->
+		<!-- </dependency> -->
 	</dependencies>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<build>
@@ -198,15 +208,12 @@
 				<artifactId>maven-war-plugin</artifactId>
 				<version>${maven.war.plugin.version}</version>
 				<configuration>
-				    <!--
-				    <warSourceDirectory>WebContent</warSourceDirectory>
-				    <failOnMissingWebXml>false</failOnMissingWebXml>
-				     -->
+					<!-- <warSourceDirectory>WebContent</warSourceDirectory> <failOnMissingWebXml>false</failOnMissingWebXml> -->
 					<packagingExcludes>WEB-INF/web.xml</packagingExcludes>
 					<warName>singlespring</warName>
 				</configuration>
 			</plugin>
-			
+
 		</plugins>
 	</build>
 

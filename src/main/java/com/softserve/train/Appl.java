@@ -1,4 +1,4 @@
-package com.softserve.edu;
+package com.softserve.train;
 
 public class Appl {
 
@@ -6,5 +6,5 @@ public class Appl {
         DialogTime dt = new DialogTime();
         dt.setVisible(true);
     }
-    
+
 }

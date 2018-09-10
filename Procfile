@@ -1,2 +1,1 @@
-web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar target/lv326.war
-web: ps aux
+web:    java $JAVA_OPTS -jar target/dependency/webapp-runner.jar --port $PORT target/*.war

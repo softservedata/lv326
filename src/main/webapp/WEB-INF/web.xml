@@ -1,7 +1,38 @@
-<!DOCTYPE web-app PUBLIC
- "-//Sun Microsystems, Inc.//DTD Web Application 2.3//EN"
- "http://java.sun.com/dtd/web-app_2_3.dtd" >
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>lv326web</display-name>
 
-<web-app>
-  <display-name>Archetype Created Web Application</display-name>
+	<!-- <servlet> -->
+	<!-- <servlet-name>mainServlet</servlet-name> -->
+	<!-- <servlet-class>com.softserve.edu.MainServlet</servlet-class> -->
+	<!-- </servlet> -->
+
+	<!-- <servlet-mapping> -->
+	<!-- <servlet-name>mainServlet</servlet-name> -->
+	<!-- <url-pattern>/</url-pattern> -->
+	<!-- <url-pattern>/home</url-pattern> -->
+	<!-- </servlet-mapping> -->
+
+	<servlet>
+		<servlet-name>info1</servlet-name>
+		<jsp-file>/WEB-INF/views/info1.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>info1</servlet-name>
+		<url-pattern>/info1.jsp</url-pattern>
+	</servlet-mapping>
+
+	<servlet>
+		<servlet-name>welcome</servlet-name>
+		<jsp-file>/index.jsp</jsp-file>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>welcome</servlet-name>
+		<url-pattern>/</url-pattern>
+		<url-pattern>/welcome</url-pattern>
+	</servlet-mapping>
+
 </web-app>

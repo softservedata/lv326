@@ -5,7 +5,7 @@
 	<!-- 3 ERROR 5 WARNING 7 INFO -->
 	<test verbose="5" name="Registrator_Test">
 		<classes>
-			<class name="com.softserve.edu.AppTest">
+			<class name="com.softserve.edu.tilesspring.AppTest">
 				<methods>
 					<include name="testApp" />
 				</methods>

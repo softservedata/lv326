@@ -6,7 +6,7 @@
 	<artifactId>singlespring</artifactId>
 	<version>1.0</version>
 
-	<packaging>war</packaging>
+	<packaging>jar</packaging>
 	<!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 	<name>singlespring</name>
 	<url>http://maven.apache.org</url>
@@ -193,19 +193,19 @@
 					<reportsDirectory>${testng.reports.directory}</reportsDirectory>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-war-plugin</artifactId>
-				<version>${maven.war.plugin.version}</version>
-				<configuration>
+<!-- 			<plugin> -->
+<!-- 				<groupId>org.apache.maven.plugins</groupId> -->
+<!-- 				<artifactId>maven-war-plugin</artifactId> -->
+<!-- 				<version>${maven.war.plugin.version}</version> -->
+<!-- 				<configuration> -->
 				    <!--
 				    <warSourceDirectory>WebContent</warSourceDirectory>
 				    <failOnMissingWebXml>false</failOnMissingWebXml>
 				     -->
-					<packagingExcludes>WEB-INF/web.xml</packagingExcludes>
-					<warName>singlespring</warName>
-				</configuration>
-			</plugin>
+<!-- 					<packagingExcludes>WEB-INF/web.xml</packagingExcludes> -->
+<!-- 					<warName>singlespring</warName> -->
+<!-- 				</configuration> -->
+<!-- 			</plugin> -->
 			
 		</plugins>
 	</build>
